@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Roboto';
+    scroll-behavior: smooth;
+}
+
+
+.siteContent {
+    display: flex;
+    position: relative;
+}
+
+
+.logoImage {
+    width: 60px;
+    height: auto;
+    margin: 30px;
+    margin-bottom: 0;
+}
+
+
+.logoHeadline {
+    display: flex;
+    align-items: baseline;
+}
+
+
+h1 {
+    font-family: 'Luxurious Script';
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.leftSideTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 1px solid lightgray;
+    width: 300px;
+    height: 100vh;
+    font-family: 'Roboto';
+    font-weight: 300;
+    position: sticky;
+    top: 0;
+}
+
+
+.leftSideBottom {
+    margin-top: auto;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+
+.rightSideTop {
+    display: flex;
+}
+
+
+.rightSideLinks {
+    display: flex;
+    flex-direction: column;
+}
+
+
+a {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    display: flex;
+    margin-top: 30px;
+}
+
+
+p {
+    color: rgb(163, 163, 163);
+    font-size: 14px;
+    margin: 0;
+}
+
+
+.sideImages {
+    height: 30px;
+    width: auto;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+
+.sideImageProfile {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+}
+
+span {
+    display: flex;
+    align-items: center;
+}
+
+
+#postContainer {
+    width: 900px;
+}
+
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-left: 250px;
+    margin-top: 40px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 1%;
+
+}
+
+
+.postHeader {
+    text-align: left;
+}
+
+
+.postHeaderItem {
+    margin-right: 10px;
+}
+
+
+.postImages {
+    width: 400px;
+    margin-top: 10px;
+    height: 600px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+.likeSection{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+
+.likeText{
+    display: flex;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+.postDescription {
+    text-align: left;
+    font-size: 14px;
+}
+
+
+.commentContainer{
+    border: 1px solid rgb(219,219,219);
+    width: 400px;
+    height: auto;
+    word-break: break-all;
+    margin-top: 10px;
+}
+
+
+.commentContainer div {
+    border-bottom: 1px solid rgb(219,219,219);
+}
+
+
+.commentContainer:empty{
+    display: none;
+}
+
+
+.deleteButton{
+    justify-content: end;
+}
+
+
+.heart{
+    width: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding-right: 5px;
+}
+
+
+.commentBox {
+    margin-top: 10px;
+}
+
+
+button {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    border-color: silver;
+    margin-left: 2px;
+}
+
+
+input{
+    border-color: silver;
+}
+
+.rightSideRecs {
+    display: flex;
+}
+
+
+.recommendations {
+    display: flex;
+    margin-top: 20px;
+}
+
+
+.recPeople {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.follow {
+    margin-left: auto;
+    font-size: 10px;
+    color: rgb(30, 160, 247);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+
+.recText {
+    font-size: 12px;
+    color: rgb(163, 163, 163);
+}
+
+
+.seeAll {
+    font-size: 12px;
+    margin-top: 0;
+    margin-left: auto;
+}
