@@ -1,18 +1,8 @@
 @media (max-width: 1460px) {
-    .post {
-        margin-left: 10px;
-    }
-
 
     .postImages {
-        /* display: flex; */
-        /* justify-content: center; */
         width: 350px;
-        margin-top: 10px;
-        height: 600px;
-        object-fit: cover;
-        margin-bottom: 10px;
-        padding-left: 20px;
+        padding-left: 75px;
     }
 
 
@@ -22,9 +12,34 @@
 
 
     #postContainer {
-        width: 450px;
+        width: 800px;
     }
 
+
+}
+
+
+@media (max-width: 1355px) {
+    .post {
+        margin-left: 100px;
+    }
+
+
+    .postImages {
+        width: 250px;
+        justify-content: center;
+        padding-left: 50px;
+    }
+
+
+    .postDescription {
+        hyphens: auto;
+    }
+
+
+    #postContainer {
+        width: 500px;
+    }
 
 }
 
@@ -37,8 +52,6 @@
 
 
     .postImages {
-        /* display: flex; */
-        /* justify-content: center; */
         width: 350px;
         margin-top: 10px;
         height: 600px;
@@ -60,7 +73,7 @@
 }
 
 
-@media (max-width: 768px) {}
+@media (max-width: 955px) {}
 
 
 
