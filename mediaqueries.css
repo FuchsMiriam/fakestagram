@@ -20,15 +20,27 @@
 
 
 @media (max-width: 1355px) {
+
+    .resizing {
+        display: flex;
+        flex-direction: column;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+
     .post {
         margin-left: 100px;
     }
 
 
     .postImages {
-        width: 250px;
-        justify-content: center;
-        padding-left: 50px;
+        width: 350px;
+        margin-top: 10px;
+        height: 600px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        padding-left: 90px;
     }
 
 
@@ -38,14 +50,64 @@
 
 
     #postContainer {
-        width: 500px;
+        width: 800px;
     }
 
 }
 
 
+@media (max-width: 1295px) {
 
-@media (max-width: 1000px) {
+    .resizing {
+        margin-left: 10px;
+    }
+
+}
+
+
+@media (max-width: 1200px) {
+
+    .resizing {
+        margin-left: 0;
+    }
+
+    .post {
+        margin-left: 10px;
+    }
+
+    .postImages {
+        width: 350px;
+        margin-top: 10px;
+        height: 600px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+
+
+    .postDescription {
+        hyphens: auto;
+    }
+
+
+    #postContainer {
+        width: 450px;
+    }
+
+    .commentContainer {
+        width: 380px;
+    }
+}
+
+
+
+@media (max-width: 1050px) {
+
+    .leftSideTop {
+        border-right: none;
+    }
+
+
     .post {
         margin-left: 10px;
     }
@@ -73,12 +135,90 @@
 }
 
 
-@media (max-width: 955px) {}
+@media (max-width: 950px) {
+
+    .siteContent {
+        flex-direction: column;
+    }
+
+    .leftSideTop {
+        position: static;
+    }
+
+
+    .commentContainer {
+        width: 380px;
+    }
+}
+
+
+@media (max-width: 832px) and (max-height: 400px) {
+
+    .leftSideTop {
+        position: static;
+        height: 100%;
+    }
+
+
+    .siteContent {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .leftSideBottom {
+        margin-left: 40px;
+    }
+
+
+    .post {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+
+    .resizing {
+        margin-left: 10px;
+        bottom: 0;
+    }
+
+
+    .commentContainer {
+        width: 380px;
+    }
+
+}
 
 
 
-@media (max-width: 480px) {}
+@media (max-width: 425px) {
+    .resizing{
+        margin-left: 10px;
+    }
 
 
+    .postImages{
+        width: 220px;
+        height: 450px;
+    }
 
-@media (max-width: 320px) {}
+
+    #postContainer{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 425px){
+    .postImages{
+        padding-left: 0;
+    }
+
+
+    .commentContainer {
+        width: 230px;
+    }
+}
