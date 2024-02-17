@@ -56,42 +56,50 @@ let posts = [
 ];
 
 
-loadComments();
+document.addEventListener('DOMContentLoaded', function () {
+    loadComments();
+});
+
 
 
 function show() {
     document.getElementById('postContainer').innerHTML = '';
     for (let i = 0; i < posts.length; i++) {
         let post = posts[i];
-        let liked = localStorage.getItem(`liked${i}`) === 'true';
-        let postDiv = document.createElement('div');
-        postDiv.classList.add('post');
-        postDiv.innerHTML = `
-        <div class="postHeader">
-          <div class="postHeaderItem"><b>${post['author']}</b></div>
-          <div class="postHeaderItem recText">${post['location']}</div>
-        </div>
-        <img class="postImages" src="${post['image']}">
-        <div class="likeSection">
-        <div class="heart" onclick="imageChange(${i})" id="likeImage${i}">${post.liked ? '❤️' : '🤍'}</div>
-        <div class="likeText">
-            <span>Gefällt&nbsp;</span>
-            <span class="likeCounter" id="likeCounter${i}">${post.likes > 0 ? post.likes : ''}</span>
-            <span>&nbsp;Mal</span>
-        </div>
-        </div>
-        <div class="postDescription">${post['description']}</div>
-        <div id="commentContainer${i}"></div>
-        <form onsubmit="addComment(${i}); return false;">
-          <div class="commentBox">
-            <input required type="text" id="input${i}" placeholder="Kommentar hinzufügen ...">
-            <button type="submit">Posten</button>
-          </div>
-        </form>
-      `;
+        let postDiv = createPostDiv(post, i);
         document.getElementById('postContainer').appendChild(postDiv);
         showComment(i);
     }
+}
+
+
+function createPostDiv(post, index) {
+    let postDiv = document.createElement('div');
+    postDiv.classList.add('post');
+    postDiv.innerHTML = `
+        <div class="postHeader">
+            <div class="postHeaderItem"><b>${post['author']}</b></div>
+            <div class="postHeaderItem recText">${post['location']}</div>
+        </div>
+        <img class="postImages" src="${post['image']}">
+        <div class="likeSection">
+            <div class="heart" onclick="imageChange(${index})" id="likeImage${index}">${post.liked ? '❤️' : '🤍'}</div>
+            <div class="likeText">
+                <span>Gefällt&nbsp;</span>
+                <span class="likeCounter" id="likeCounter${index}">${post.likes > 0 ? post.likes : ''}</span>
+                <span>&nbsp;Mal</span>
+            </div>
+        </div>
+        <div class="postDescription">${post['description']}</div>
+        <div id="commentContainer${index}"></div>
+        <form onsubmit="addComment(${index}); return false;">
+            <div class="commentBox">
+                <input required type="text" id="input${index}" placeholder="Kommentar hinzufügen ...">
+                <button type="submit">Posten</button>
+            </div>
+        </form>
+    `;
+    return postDiv;
 }
 
 
@@ -106,6 +114,7 @@ function imageChange(i) {
         post.liked = true;
         post.likes += 1;
     }
+
     imageElement.innerHTML = post.liked ? '❤️' : '🤍';
     counterElement.textContent = post.likes > 0 ? post.likes : '';
     saveArrayToLocalStorage('posts', posts);
@@ -158,6 +167,7 @@ function loadComments() {
     if (Array.isArray(storedPosts)) {
         posts = storedPosts;
     }
+    show();
 }
 
 
