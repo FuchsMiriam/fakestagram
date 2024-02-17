@@ -201,18 +201,19 @@
 
 
     .postImages {
-        padding-left: 0;
-    }
-
-
-    .postImages {
-        width: 220px;
+        width: 200px;
         height: 450px;
+        padding-left: 0;
     }
 
 
     #postContainer {
         width: 100%;
+        padding-left: 20px;
+    }
+
+
+    .post{
         padding-left: 20px;
     }
 }
